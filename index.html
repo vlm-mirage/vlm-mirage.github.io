@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Machine Mental Imagery</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <style>
+    /* Optionally, ensure there is no clipping in publication-video containers */
+    .publication-video {
+      overflow: visible; /* or overflow: auto */
+    }
+    
+    /* Enforce video scaling rules */
+    .publication-video video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- <h1 class="title is-1 publication-title">Machine Mental Imagery: Empower Multimodal Reasoning with Latent Visual Tokens</h1> -->
+          <h1 class="title is-1 publication-title">
+            <a style="color:#ffb3ba;">M</a><a style="color:#ffaaa7;">i</a><a style="color:#ffb7b3;">r</a><a style="color:#ffdac1;">a</a><a style="color:#ffedc1;">g</a><a style="color:#e0b2ff;">e</a>            
+          </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            Machine Mental Imagery: Empower Multimodal Reasoning with Latent Visual Tokens      
+          </h2>
+          <!-- <h2 class="subtitle publication-subtitle" style="font-size: 1.7rem;color:#000000; margin-top: -7px;">
+            NeurIPS 2025 in submission
+          </h2> -->
+          <div class="is-size-5 publication-authors" style="margin-top: -7px;">
+            <span class="author-block">
+              <a href="https://miicheyang.github.io/">Zeyuan Yang</a>*<sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/Unicorn53547">Xueyang Yu</a>*<sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=zI3TFsUAAAAJ&hl=zh-CN">Delin Chen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://maohaos2.github.io/Maohao/">Maohao Shen</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.csail.mit.edu/ganchuang/">Chuang Gan</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>UMass Amherst,</span>
+            <span class="author-block"><sup>2</sup>MIT</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">(* indicates equal contribution)</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/UMass-Embodied-AGI/Mirage"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="YOUR_HUGGING_FACE_LINK_HERE"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-huggingface"></i> </span>
+                  <span>Hugging Face</span>
+                </a>
+              </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-four-fifths">
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Video</h2> -->
+        <div class="publication-video">
+          <video src="static/videos/video_intro.mp4" controls autoplay muted
+                style="width: 100%; height: auto;">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+    
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Vision-language models (VLMs) excel at multimodal understanding, yet their text-only decoding forces them to verbalize visual reasoning, limiting performance on tasks that demand visual imagination.
+            Recent attempts train VLMs to render explicit images, but the heavy image-generation pre-training often hinders the reasoning ability.
+            Inspired by the way humans reason with mental imagery—the internal construction and manipulation of visual cues—we investigate whether VLMs can reason through interleaved multimodal trajectories without producing explicit images.
+            To this end, we present a Machine Mental Imagery framework, dubbed as Mirage, which augments VLM decoding with latent visual tokens alongside ordinary text.
+            Concretely, whenever the model chooses to ``think visually'', it recasts its hidden states as next tokens, thereby continuing a multimodal trajectory without generating pixel-level images.
+            Begin by supervising the latent tokens through distillation from ground-truth image embeddings, we then switch to text-only supervision to make the latent trajectory align tightly with the task objective. A subsequent reinforcement learning stage further enhances the multimodal reasoning capability.
+            Experiments on diverse benchmarks demonstrate that Mirage unlocks stronger multimodal reasoning without explicit image generation. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Methodology. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Overview</h2>
+        <h3 class="title is-4">Data Generation</h3>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-20">
+            <img src="./static/images/data_generation.png" alt="Overview" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <p class="has-text-justified">
+          Text todo
+        </p>
+        <br> <br>
+        
+        <h3 class="title is-4">Latent Grounding Supervision & Joint Optimization</h3>
+        
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-20">
+            <img src="./static/images/optimization.png" alt="Latent Grounding Supervision" style="width: 100%; height: auto;">
+          </div>
+        </div>
+      
+      <p class="has-text-justified">
+        Text todo
+      </p>
+      <br> <br>
+    </div>
+    </div>
+    <!--/ Methodology. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-20">
+            <img src="./static/images/results.png" alt="Results" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        Text todo
+        
+        </div>
+      </div>
+    </div>
+    <!--/ Results. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Analysis. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Analysis</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-20">
+            <img src="./static/images/analysis_latent.png" alt="Analysis" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <p class="has-text-justified">
+          Text todo
+        </p>
+        <br> <br>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-20">
+            <img src="./static/images/analysis_helper.png" alt="Analysis" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <p class="has-text-justified">
+          Text todo
+        </p>
+        <br> <br>
+
+      </div>
+    </div>
+    <!--/ Analysis. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Examples. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3">Examples</h3>
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-steve">
+              <img src="./static/images/logo.png" alt="">
+            </div>
+            <div class="item item-chair-tp">
+              <img src="./static/images/logo.png" alt="">
+            </div>
+            <div class="item item-shiba">
+              <img src="./static/images/logo.png" alt="">
+            </div>
+            <div class="item item-coffee">
+              <img src="./static/images/logo.png" alt="">
+            </div>
+            <div class="item item-toby">
+              <img src="./static/images/logo.png" alt="">
+            </div>
+          </div>
+
+        </div>
+            
+        
+        </div>
+      </div>
+    </div>
+    <!--/ Examples. -->
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX" style="margin-top: 30mm;">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@arxiv{yang20243dmem3dscenememory,
+      title={Machine Mental Imagery: Empower Multimodal Reasoning with Latent Visual Tokens}, 
+      author={Zeyuan Yang and Xueyang Yu and Delin Chen and Maohao Shen and Chuang Gan},
+      year={2025},
+      eprint={2506.xxxxx},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2506.xxxxx}, 
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
