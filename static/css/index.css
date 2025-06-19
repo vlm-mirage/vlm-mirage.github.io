@@ -178,11 +178,27 @@ figcaption {
   color: #333;
 }
 
-/* Add your gradient text class here too */
 .mirage-gradient-text {
 background: linear-gradient(to right, #4CAF50, #2196F3, #9C27B0);
 -webkit-background-clip: text;
 background-clip: text;
 color: transparent;
 font-weight: bold;
+}
+
+
+.title-logo {
+  /* Adjust these values to fit your design */
+  height: 2em; /* Make the logo's height proportional to the font size of the title */
+  vertical-align: middle; /* Aligns the image vertically with the middle of the text */
+  margin-left: 0.2em; /* Add a small space between the text and the logo */
+  /* You might need to adjust width or max-width if the aspect ratio is off */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Optional: If your logo needs to be slightly larger/smaller than the text */
+.title.is-1 .title-logo {
+  height: 1.8em; /* Slightly smaller than the title text */
+  /* Or a fixed pixel size if you prefer: */
+  /* height: 40px; */
 }
