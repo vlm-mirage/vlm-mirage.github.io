@@ -51,6 +51,8 @@
       display: block;
     }
   </style>
+
+
 </head>
 <body>
 
@@ -62,7 +64,8 @@
         <div class="column has-text-centered">
           <!-- <h1 class="title is-1 publication-title">Machine Mental Imagery: Empower Multimodal Reasoning with Latent Visual Tokens</h1> -->
           <h1 class="title is-1 publication-title">
-            <a style="color:#ffb3ba;">M</a><a style="color:#ffaaa7;">i</a><a style="color:#ffb7b3;">r</a><a style="color:#ffdac1;">a</a><a style="color:#ffedc1;">g</a><a style="color:#e0b2ff;">e</a>            
+            <!-- <a style="color:#ffb3ba;">M</a><a style="color:#ffaaa7;">i</a><a style="color:#ffb7b3;">r</a><a style="color:#ffdac1;">a</a><a style="color:#ffedc1;">g</a><a style="color:#e0b2ff;">e</a>             -->
+             <a class="mirage-gradient-text">Mirage</a> <span class="has-text-weight-light">
           </h1>
           <h2 class="subtitle is-3 publication-subtitle">
             Machine Mental Imagery: Empower Multimodal Reasoning with Latent Visual Tokens      
@@ -167,10 +170,10 @@
             Vision-language models (VLMs) excel at multimodal understanding, yet their text-only decoding forces them to verbalize visual reasoning, limiting performance on tasks that demand visual imagination.
             Recent attempts train VLMs to render explicit images, but the heavy image-generation pre-training often hinders the reasoning ability.
             Inspired by the way humans reason with mental imagery—the internal construction and manipulation of visual cues—we investigate whether VLMs can reason through interleaved multimodal trajectories without producing explicit images.
-            To this end, we present a Machine Mental Imagery framework, dubbed as Mirage, which augments VLM decoding with latent visual tokens alongside ordinary text.
+            To this end, we present a Machine Mental Imagery framework, dubbed as <b><span class="mirage-gradient-text">Mirage</span></b>, which augments VLM decoding with latent visual tokens alongside ordinary text.
             Concretely, whenever the model chooses to ``think visually'', it recasts its hidden states as next tokens, thereby continuing a multimodal trajectory without generating pixel-level images.
             Begin by supervising the latent tokens through distillation from ground-truth image embeddings, we then switch to text-only supervision to make the latent trajectory align tightly with the task objective. A subsequent reinforcement learning stage further enhances the multimodal reasoning capability.
-            Experiments on diverse benchmarks demonstrate that Mirage unlocks stronger multimodal reasoning without explicit image generation. 
+            Experiments on diverse benchmarks demonstrate that <b><span class="mirage-gradient-text">Mirage</span></b> unlocks stronger multimodal reasoning without explicit image generation. 
           </p>
         </div>
       </div>
@@ -186,14 +189,27 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Overview</h2>
+
+        <h3 class="title is-4">Motivation</h3>
+        
+        <p class="has-text-justified">
+          Vision-language models (VLMs) currently rely on text-only decoding, which limits their performance on tasks requiring visual imagination. Existing attempts to train VLMs to render explicit images often hinder their reasoning ability. These limitations led to a research question: 
+          <br> <br>
+          <b>Can VLMs reason benefit from, weaving compact visual information into the text stream and dispensing with the need for explicit image generation?</b>
+          <br> <br>
+          Inspired by human mental imagery, we introduce <b><span class="mirage-gradient-text">Mirage</span></b>, a framework that enables VLMs to reason through interleaved multimodal trajectories without producing explicit images.  Our solution, <b><span class="mirage-gradient-text">Mirage</span></b>, augments VLM decoding with latent visual tokens alongside ordinary text, allowing the model to "think visually" by recasting its hidden states as next tokens, thereby continuing a multimodal trajectory without generating pixel-level images
+        </p>
+        <br> <br>
+
         <h3 class="title is-4">Data Generation</h3>
         <div class="columns is-centered has-text-centered">
           <div class="column is-20">
             <img src="./static/images/data_generation.png" alt="Overview" style="width: 100%; height: auto;">
+              
           </div>
         </div>
         <p class="has-text-justified">
-          Text todo
+          A training corpus is synthesized where each input is paired with a task-specific <i>helper image</i> that provides precise visual cues. Then, a large reasoning VLM is prompted with the original input, ground-truth answer, and the helper image to generate a step-by-step reasoning chain that incorporates the helper image.
         </p>
         <br> <br>
         
@@ -206,7 +222,7 @@
         </div>
       
       <p class="has-text-justified">
-        Text todo
+        The training of Mirage involves a two-stage fine-tuning paradigm to enable interleaved reasoning. The first stage jointly supervises text and latent visual tokens, grounding the latter in the visual subspace, while the second stage removes direct supervision on the latent vectors, allowing them to adapt as priors for subsequent text generation.
       </p>
       <br> <br>
     </div>
@@ -224,10 +240,43 @@
         <h2 class="title is-3">Results</h2>
         <div class="columns is-centered has-text-centered">
           <div class="column is-20">
-            <img src="./static/images/results.png" alt="Results" style="width: 100%; height: auto;">
+            <figure>
+            <img src="./static/images/results_1.png" alt="Analysis" style="width: 100%; height: auto;">
+            <figcaption>7B VSP benchmark</figcaption>
+          </figure>
           </div>
+          
         </div>
-        Text todo
+        <p class="has-text-justified">
+          <b><span class="mirage-gradient-text">Mirage</span></b> significantly enhances the reasoning capability of 7B VLMs on VSP tasks, leading to improved accuracy compared to text-only baselines and existing unified models.
+        </p>
+        <br> <br>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-20">
+            <figure>
+            <img src="./static/images/results_2.png" alt="Analysis" style="width: 100%; height: auto;">
+            <figcaption>7B General Visual Reasoning</figcaption>
+          </figure>
+          </div>
+          
+        </div>
+        <p class="has-text-justified">
+          <b><span class="mirage-gradient-text">Mirage</span></b> onsistently yields performance gains across diverse multimodal reasoning benchmarks, demonstrating that interleaving compact visual cues strengthens spatial reasoning abilities for 7B models.
+        </p>
+        <br> <br>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-20">
+            <figure>
+            <img src="./static/images/results_3.png" alt="Analysis" style="width: 100%; height: auto;">
+            <figcaption>3B results</figcaption>
+          </figure>
+          </div>
+          
+        </div>
+        <p class="has-text-justified">
+          <b><span class="mirage-gradient-text">Mirage</span></b> achieves clear performance gains on smaller 3B models, showing even larger improvements on tasks like Jigsaw and SAT Real compared to text-only baselines.
+        </p>
+        <br> <br>
         
         </div>
       </div>
@@ -244,20 +293,26 @@
         <h2 class="title is-3">Analysis</h2>
         <div class="columns is-centered has-text-centered">
           <div class="column is-20">
+            <figure>
             <img src="./static/images/analysis_latent.png" alt="Analysis" style="width: 100%; height: auto;">
+            <figcaption>Latent Behaviour Analysis</figcaption>
+          </figure>
           </div>
         </div>
         <p class="has-text-justified">
-          Text todo
+          During the first training stage, Mirage learns to anchor its latent tokens in the visual subspace by reproducing compressed image embeddings. Even without direct supervision in the second stage, these latent tokens remain clearly separated from the text distribution and closer to the visual embedding, demonstrating their flexibility and ability to abstract visual input for reasoning.
         </p>
         <br> <br>
         <div class="columns is-centered has-text-centered">
           <div class="column is-20">
+            <figure></figure>
             <img src="./static/images/analysis_helper.png" alt="Analysis" style="width: 100%; height: auto;">
+            <figcaption>Helper Image Quality</figcaption>
+          </figure>
           </div>
         </div>
         <p class="has-text-justified">
-          Text todo
+          The quality of the synthesized helper images is crucial for VLM reasoning, and providing these helper images as prior input significantly enhances model accuracy. Even in a zero-shot setting, substantial performance gains are observed on spatial reasoning tasks, underscoring the informativeness and high quality of the generated data.
         </p>
         <br> <br>
 
@@ -275,19 +330,19 @@
         <h3 class="title is-3">Examples</h3>
         <div class="container">
           <div id="results-carousel" class="carousel results-carousel">
-            <div class="item item-steve">
+            <div class="item example-1">
               <img src="./static/images/logo.png" alt="">
             </div>
-            <div class="item item-chair-tp">
+            <div class="item example-2">
               <img src="./static/images/logo.png" alt="">
             </div>
-            <div class="item item-shiba">
+            <div class="item example-3">
               <img src="./static/images/logo.png" alt="">
             </div>
-            <div class="item item-coffee">
+            <div class="item example-4">
               <img src="./static/images/logo.png" alt="">
             </div>
-            <div class="item item-toby">
+            <div class="item example-5">
               <img src="./static/images/logo.png" alt="">
             </div>
           </div>
@@ -322,15 +377,6 @@
 
 <footer class="footer">
   <div class="container">
-    <!-- <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div> -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
@@ -339,13 +385,13 @@
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-          <p>
+          <!-- <p>
             This means you are free to borrow the <a
               href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
             we just ask that you link back to this page in the footer.
             Please remember to remove the analytics code included in the header of the website which
             you do not want on your website.
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
