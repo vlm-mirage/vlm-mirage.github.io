@@ -114,13 +114,43 @@ body {
   overflow: hidden;
 }
 
-.results-carousel .item {
+/* .results-carousel .item {
   margin: 5px;
   overflow: hidden;
   border: 1px solid #bbb;
   border-radius: 10px;
   padding: 0;
   font-size: 0;
+} */
+/* Add or replace the styles in your index.css file with this */
+
+/* In index.css, find and REPLACE the existing .results-carousel .item rule with this: */
+
+.results-carousel .item {
+  /* 1. Increased height. Feel free to adjust this value! */
+  height: 450px;
+
+  /* 2. Use flexbox to perfectly center the image inside (Keep this) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 3. Your existing styles (Keep these) */
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.results-carousel .item img {
+  /* 3. Ensure the image scales correctly within the container. */
+  max-width: 100%;
+  max-height: 100%;
+
+  /* 4. This is the key property! */
+  /* 'contain' makes the whole image visible without stretching it. */
+  object-fit: contain;
 }
 
 .results-carousel video {
@@ -201,4 +231,12 @@ font-weight: bold;
   height: 1.8em; /* Slightly smaller than the title text */
   /* Or a fixed pixel size if you prefer: */
   /* height: 40px; */
+}
+
+
+.tab-content .tab-pane {
+  display: none;
+}
+.tab-content .tab-pane.is-active {
+  display: block;
 }

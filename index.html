@@ -81,7 +81,7 @@
             <span class="author-block">
               <a href="https://github.com/Unicorn53547">Xueyang Yu</a>*<sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=zI3TFsUAAAAJ&hl=zh-CN">Delin Chen</a><sup>1</sup>,
+              <a href="https://chendl02.github.io/">Delin Chen</a><sup>1</sup>,
             </span>
             <span class="author-block">
               <a href="https://maohaos2.github.io/Maohao/">Maohao Shen</a><sup>2</sup>,
@@ -102,6 +102,14 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
+              <span class="link-block">
+                <a href="./static/pdfs/mirage_arxiv.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
               <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
@@ -265,7 +273,7 @@
         <p class="has-text-justified">
           <b><span class="mirage-gradient-text">Mirage</span></b> onsistently yields performance gains across diverse multimodal reasoning benchmarks, demonstrating that interleaving compact visual cues strengthens spatial reasoning abilities for 7B models.
         </p>
-        <br> <br>
+        <!-- <br> <br>
         <div class="columns is-centered has-text-centered">
           <div class="column is-20">
             <figure>
@@ -278,7 +286,7 @@
         <p class="has-text-justified">
           <b><span class="mirage-gradient-text">Mirage</span></b> achieves clear performance gains on smaller 3B models, showing even larger improvements on tasks like Jigsaw and SAT Real compared to text-only baselines.
         </p>
-        <br> <br>
+        <br> <br> -->
         
         </div>
       </div>
@@ -326,26 +334,26 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Examples. -->
+
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h3 class="title is-3">Examples</h3>
         <div class="container">
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item example-1">
-              <img src="./static/images/logo.png" alt="">
+              <img src="./static/images/example_sat.png" alt="width: 100%; height: auto;">
             </div>
             <div class="item example-2">
-              <img src="./static/images/logo.png" alt="">
+              <img src="./static/images/example_jigsaw.png" alt="width: 100%; height: auto;">
             </div>
             <div class="item example-3">
-              <img src="./static/images/logo.png" alt="">
+              <img src="./static/images/example_comt_1.png" alt="width: 100%; height: auto;">
             </div>
             <div class="item example-4">
-              <img src="./static/images/logo.png" alt="">
+              <img src="./static/images/example_comt_2.png" alt="width: 100%; height: auto;">
             </div>
             <div class="item example-5">
-              <img src="./static/images/logo.png" alt="">
+              <img src="./static/images/example_comt_2.png" alt="width: 100%; height: auto;">
             </div>
           </div>
 
@@ -355,8 +363,124 @@
         </div>
       </div>
     </div>
-    <!--/ Examples. -->
+
   </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Examples</h2> 
+      </div>
+    </div>
+    
+    <!-- Tabs navigation -->
+    <div class="tabs is-centered is-boxed">
+      <ul>
+        <li class="is-active" data-tab="1">
+          <a>
+            <span>Example 1: SAT</span>
+          </a>
+        </li>
+        <li data-tab="2">
+          <a>
+            <span>Example 2: CoMT</span>
+          </a>
+        </li>
+        <li data-tab="3">
+          <a>
+            <span>Example 3: CoMT-2</span>
+          </a>
+        </li>
+        <li data-tab="4">
+          <a>
+            <span>Example 4: Jigsaw</span>
+          </a>
+        </li>
+        <li data-tab="5">
+          <a>
+            <span>Example 5: VSP Planning</span>
+          </a>
+        </li>
+        <li data-tab="6">
+          <a>
+            <span>Example 6: VSP Reasoning</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Tab content -->
+    <div class="tab-content">
+      <!-- Example 1 -->
+      <div class="tab-pane is-active" id="tab-1">
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="image-container" style="width: 100%; margin-bottom: 20px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+              <img src="./static/images/example_sat.png" alt="Example 1" style="width: 100%; max-height: 400px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Example 2 -->
+      <div class="tab-pane" id="tab-2">
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="image-container" style="width: 100%; margin-bottom: 20px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+              <img src="./static/images/example_comt_1.png" alt="Example 2" style="width: 100%; max-height: 400px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Example 3 -->
+      <div class="tab-pane" id="tab-3">
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="image-container" style="width: 100%; margin-bottom: 20px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+              <img src="./static/images/example_comt_2.png" alt="Example 3" style="width: 100%; max-height: 400px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 4 -->
+      <div class="tab-pane" id="tab-4">
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="image-container" style="width: 100%; margin-bottom: 20px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+              <img src="./static/images/example_jigsaw.png" alt="Example 3" style="width: 100%; max-height: 400px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+
+
+    <div class="tab-pane" id="tab-5">
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="image-container" style="width: 100%; margin-bottom: 20px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+            <img src="./static/images/example_vsp_plan.png" alt="Example 3" style="width: 100%; max-height: 400px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="tab-pane" id="tab-6">
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="image-container" style="width: 100%; margin-bottom: 20px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+            <img src="./static/images/example_vsp_reason.png" alt="Example 3" style="width: 100%; max-height: 400px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
 </section>
 
 
@@ -387,18 +511,50 @@
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-          <!-- <p>
+          <p>
             This means you are free to borrow the <a
               href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
             we just ask that you link back to this page in the footer.
             Please remember to remove the analytics code included in the header of the website which
             you do not want on your website.
-          </p> -->
+          </p>
         </div>
       </div>
     </div>
   </div>
 </footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
+<!-- Tab functionality for Examples section -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Get all tabs
+    const tabs = document.querySelectorAll('.tabs li');
+    const tabContentPanes = document.querySelectorAll('.tab-content .tab-pane');
+    
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove 'is-active' class from all tabs
+        tabs.forEach(item => {
+          item.classList.remove('is-active');
+        });
+        
+        // Add 'is-active' class to clicked tab
+        tab.classList.add('is-active');
+        
+        // Hide all tab panes
+        tabContentPanes.forEach(pane => {
+          pane.classList.remove('is-active');
+        });
+        
+        // Show the corresponding tab pane
+        const tabId = tab.getAttribute('data-tab');
+        document.getElementById('tab-' + tabId).classList.add('is-active');
+      });
+    });
+  });
+  </script>
 
 </body>
 </html>
