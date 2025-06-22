@@ -1,4 +1,4 @@
-window.HELP_IMPROVE_VIDEOJS = false;
+// window.HELP_IMPROVE_VIDEOJS = false;
 
 // function createInterpolationSection(wrapperId, sliderId, basePath, numFrames) {
 //   var interpImages = [];
@@ -94,11 +94,12 @@ $(document).ready(function() {
 
   // Carousel options - UPDATE THIS SECTION
   var options = {
-    slidesToScroll: 2,  // Change to 2 so it scrolls two at a time
-    slidesToShow: 2,    // Change to 2 to show two images
+    slidesToScroll: 1,  // Change to 2 so it scrolls two at a time
+    slidesToShow: 1,    // Change to 2 to show two images
     loop: true,
     infinite: true,
     autoplay: false,
+    pauseOnHover   : true,
   };
 
   // Initialize all elements with the 'carousel' class
